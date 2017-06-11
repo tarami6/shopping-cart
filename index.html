@@ -2,8 +2,8 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Shopping Cart!</title>
 </head>
@@ -38,9 +38,15 @@
   </div>
 
   <div class="container">
-    <div class="shopping-cart">
+    <div class="shopping-cart ">
       <p class="cart-title">Items in Cart</p>
-      <div class="cart-list"></div>
+      <div class="cart-list">
+        <!-- Here I append the item list -->
+        <script id="product-template" type="text/x-handlebars-template">
+                       <li>{{productName}} : {{productPrice}}</li>
+                    </script>
+      </div>
+
       <p>Total: $<span class="total">0</span></p>
       <button type="button" class="btn clear-cart">Clear Cart</button>
     </div>
@@ -147,9 +153,9 @@
       </div>
     </div>
   </div>
-    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
